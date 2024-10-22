@@ -9,7 +9,7 @@ st.write("Press 2 if you want to Convert from Fahrenheit")
 st.write("Press 3 if you want to Convert from Kelvin")
 
 # User input for conversion choice
-choice_to_convert_from = st.number_input("Enter your choice:", min_value=1, max_value=3, step=1, key='choice_from')
+choice_to_convert_from = st.number_input("Enter your choice:", step=1, key='choice_from')
 
 if choice_to_convert_from == 1:
     temperature = st.number_input("Enter the temperature in Celsius:", step=1.0, key='temp_celsius')
@@ -21,7 +21,7 @@ if choice_to_convert_from == 1:
         st.write("Press 2 if you want to Convert to Kelvin")
         st.write("Press 3 if you want to Convert to Both")
 
-        choice_to_convert_to = st.number_input("Enter your choice:", min_value=1, max_value=3, step=1, key='choice_to_celsius')
+        choice_to_convert_to = st.number_input("Enter your choice:", step=1, key='choice_to_celsius')
 
         if choice_to_convert_to == 1:
             st.write(f"The temperature in Fahrenheit is: {fahrenheit}")
@@ -41,7 +41,7 @@ elif choice_to_convert_from == 2:
         st.write("Press 2 if you want to Convert to Kelvin")
         st.write("Press 3 if you want to Convert to Both")
 
-        choice_to_convert_to = st.number_input("Enter your choice:", min_value=1, max_value=3, step=1, key='choice_to_fahrenheit')
+        choice_to_convert_to = st.number_input("Enter your choice:", step=1, key='choice_to_fahrenheit')
 
         if choice_to_convert_to == 1:
             st.write(f"The temperature in Celsius is: {celsius}")
@@ -61,7 +61,7 @@ elif choice_to_convert_from == 3:
         st.write("Press 2 if you want to Convert to Fahrenheit")
         st.write("Press 3 if you want to Convert to Both")
 
-        choice_to_convert_to = st.number_input("Enter your choice:", min_value=1, max_value=3, step=1, key='choice_to_kelvin')
+        choice_to_convert_to = st.number_input("Enter your choice:", step=1, key='choice_to_kelvin')
 
         if choice_to_convert_to == 1:
             st.write(f"The temperature in Celsius is: {celsius}")
