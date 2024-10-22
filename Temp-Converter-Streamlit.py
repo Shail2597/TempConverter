@@ -51,4 +51,25 @@ elif choice_to_convert_from == 2:
             st.write(f"The temperature in Celsius is: {celsius}")
             st.write(f"The temperature in Kelvin is: {kelvin}")
 
-elif choice_to_conve
+elif choice_to_convert_from == 3:
+    temperature = st.number_input("Enter the temperature in Kelvin:", step=1.0, key='temp_kelvin')
+    if st.button("Convert"):
+        celsius = round(temperature - 273.15, 2)
+        fahrenheit = round((temperature - 273.15) * 9 / 5 + 32, 2)
+
+        st.write("Press 1 if you want to Convert to Celsius")
+        st.write("Press 2 if you want to Convert to Fahrenheit")
+        st.write("Press 3 if you want to Convert to Both")
+
+        choice_to_convert_to = st.number_input("Enter your choice:", min_value=1, max_value=3, step=1, key='choice_to_kelvin')
+
+        if choice_to_convert_to == 1:
+            st.write(f"The temperature in Celsius is: {celsius}")
+        elif choice_to_convert_to == 2:
+            st.write(f"The temperature in Fahrenheit is: {fahrenheit}")
+        elif choice_to_convert_to == 3:
+            st.write(f"The temperature in Celsius is: {celsius}")
+            st.write(f"The temperature in Fahrenheit is: {fahrenheit}")
+
+else:
+    st.write("You entered an invalid input.")
